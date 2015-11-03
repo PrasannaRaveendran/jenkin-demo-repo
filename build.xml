@@ -21,6 +21,8 @@
       <fileset dir="${basedir}/build/coverage" includes="**.*" />
     </delete>
   </target>
+  
+  <target name="build" depends="init,phpunit,php-documentor" />
 
   <target name="phpunit">
     <exec executable="phpunit" dir="${basedir}/tests" failonerror="off">
